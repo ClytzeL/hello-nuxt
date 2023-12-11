@@ -15,10 +15,12 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-
+  // 自定义应用的加载样式
+  loading: { color: '#000' },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    'ant-design-vue/dist/antd.css'
+    'ant-design-vue/dist/antd.css',
+    '@/assets/css/style.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -48,6 +50,13 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
+  // 构建配置
   build: {
+    // 提取 CSS 到单独的文件
+    extractCSS: true,
+    // 最小化 JavaScript 和 CSS
+    minimize: true,
+    // 使用 CDN 加载第三方库
+    // publicPath: 'https://cdn.example.com/assets/'
   }
 }
